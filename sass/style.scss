@@ -9,7 +9,7 @@
 
 $color-black: #000000;
 
-$color-primary: #181818;
+$color-primary: #124a93;
 $text-color: #ffffff;
 
 
@@ -20,6 +20,7 @@ $text-color: #ffffff;
     --text-color: #{$text-color};
   }
 
+@import './utils/global';
 
 @import './pages/home';
 @import './pages/components';
