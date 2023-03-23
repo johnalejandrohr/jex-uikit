@@ -1,0 +1,16 @@
+.footer {
+    background-color: $color-primary;
+    color: var(--text-color);
+    padding: 2rem;
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        p {
+            a {
+                color: var(--text-color);
+            }
+        }
+    }
+}
