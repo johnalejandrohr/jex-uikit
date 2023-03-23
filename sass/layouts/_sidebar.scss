@@ -9,10 +9,10 @@
     left: 0;
     z-index: 100;
     transition: all 0.5s ease-in-out;
-    border-right: 1px solid rgb(197, 190, 190);
     transform: translateX(-100%);
     display: flex;
     flex-direction: column;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
     /* background-image: url('https://cdn.pixabay.com/photo/2018/01/11/21/27/laptop-3076957_960_720.jpg'); */
 
 }

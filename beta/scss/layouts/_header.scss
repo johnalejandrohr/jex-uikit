@@ -5,7 +5,7 @@
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 2fr;
-    // opacity: .9;
+    opacity: .9;
     z-index: 10;
     position: sticky;
     top: 0;
@@ -29,9 +29,7 @@
                 text-align: center;
                 text-decoration: none;
                 &:hover {
-                    // border-bottom: 2px solid beige;
-                    transition: all 1s ease-in-out;
-                    transform: scale(1.3);
+                    border-bottom: 2px solid beige;
                 }
             }
         }
