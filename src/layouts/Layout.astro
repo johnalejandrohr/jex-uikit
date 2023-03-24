@@ -33,7 +33,7 @@ import Footer from './Footer.astro';
         <Header />
         <Sidebar />
 		<slot />
-        <Footer />
+        
         <script>
             let btn_toggle = document.querySelector('#btn-toggle') as HTMLElement;
             btn_toggle.addEventListener('click', function() {
@@ -54,3 +54,4 @@ import Footer from './Footer.astro';
         </script>
 	</body>
 </html>
+<Footer />

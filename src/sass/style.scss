@@ -22,7 +22,7 @@ $color-primary: orangered;
 $text-color: #ffffff;
 
 // theme cuatro
-$color-primary: rgb(12, 99, 80);
+$color-primary: #0c6350;
 $text-color: #ffffff;
 
 
@@ -60,6 +60,10 @@ $text-color: #ffffff;
   font-family: 'Poppins', sans-serif;
 }
 
+html {
+    min-height: 100vh;
+    position: relative;
+}
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #ffffff;
