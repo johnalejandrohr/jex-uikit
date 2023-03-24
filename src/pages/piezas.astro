@@ -1,100 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JEX&UIKIT</title>
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"> -->
-    <link id="style" rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-<body class="">
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+---
 
-    <!-- Header -->
-    <header class="header">
-        <div class="header__item">
-            <div id="btn-toggle">
-                <a href="#services" style="font-size: 24px; color:#fff"> <i class="fa-sharp fa-solid fa-bars"></i> </a>
-            </div>
-        </div>
-        <div class="header__item">
-
-        </div>
-        <div class="header__item">
-            <div>
-                <a href="./index.html">HOME</a>
-            </div>
-            <a href="./piezas.html">Piezas</a>
-        </div>
-    </header>
-    <!-- \header -->
-
-    <!-- Sidebar -->
-    <sidebar class="sidebar" id="sidebar">
-        <div class="sidebar__brand">
-            <div class="sidebar__brand_item">
-                <p class="sidebar__brand_title">JEX&UIKIT</p>
-            </div>
-            <div class="sidebar__brand_item" id="btn-toggle1">
-                <i class="fa-sharp fa-solid fa-share fa-flip-horizontal" style="color:#fff"></i>
-            </div>
-        </div>
-        <div class="sidebar__profile">
-            <div class="sidebar__profile_item">
-                <img src="https://adminlte.io/themes/v3/dist/img/user8-128x128.jpg" alt="profile"
-                    class="sidebar__profile_img">
-            </div>
-            <div class="sidebar__profile_item">
-                <p class="sidebar__profile_name">John Doe</p>
-            </div>
-        </div>
-        <div class="sidebar__menu">
-            <ul class="list">
-                <li class="list__item a--disabled">
-                    <i class="bi bi-person"></i>
-                    <a class="a--disabled" href="#">Perfíl</a>
-                </li>
-                <li class="list__item a--disabled">
-                    <i class="bi bi-gear"></i>
-                    <a class="a--disabled" href="#">Configuracion</a>
-                </li>
-                <li class="list__item">
-                    <i class="bi bi-arrow-down"></i>
-                    <a href="./components.html">Components</a>
-                </li>
-                <li class="list__item">
-                    <i class="bi bi-arrow-up"></i>
-                    <a href="./expenses.html">Expenses</a>
-                </li>
-                <li class="list__item">
-                    <i class="bi bi-people"></i>
-                    <a href="./index.html">Index</a>
-                </li>
-                <li class="list__item">
-                    <i class="bi bi-door-open"></i>
-                    <a href="#">Salir</a>
-                </li>
-            </ul>
-            <div class="config">
-                <div class="config__item">
-                    <div class="point1"></div>
-                </div>
-                <div class="config__item">
-                    <div class="point2"></div>
-                </div>
-                <div class="config__item">
-                    <div class="point3"></div>
-                </div>
-                <div class="config__item">
-                    <div class="point4"></div>
-                </div>
-            </div>
-        </div>
-    </sidebar>
-    <!-- /sidebar -->
-
-    <div class="page-piezas m1">
+<Layout title="Welcome to Astro.">
+	<main class="page-piezas m1">
         <div class="item">
             <div class="card cursor-pointer">
                 <div class="card__header">
@@ -196,32 +106,5 @@
                 </div>
             </div>
         </div>
-    </div>
-
-    <footer class="footer">
-        <div class="footer__content">
-            <p>© 2023 Todos los derechos reservados</p>
-            <p>Desarrollado por: <a href="https://github.com/johnalejandrohr" target="_blank">John Alejandro</a></p>
-        </div>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="main.js"></script>
-    <script>
-        let btn_toggle = document.querySelector('#btn-toggle');
-        btn_toggle.addEventListener('click', function() {
-            document.querySelector('.sidebar').classList.toggle('sidebar--active');
-        });
-        let btn_toggle1 = document.querySelector('#btn-toggle1');
-        btn_toggle1.addEventListener('click', function() {
-            document.querySelector('.sidebar').classList.toggle('sidebar--active');
-        });
-
-        const link = document.querySelector('#style');
-            link.addEventListener('load', () => {
-            document.documentElement.style.setProperty('--color-primary', '#000');
-        });
-
-    </script>
-</body>
-</html>
+    </main>
+</Layout>

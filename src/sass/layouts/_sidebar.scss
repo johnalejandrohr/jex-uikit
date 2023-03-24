@@ -8,7 +8,7 @@
     top: 0;
     left: 0;
     z-index: 100;
-    transition: all 0.5s ease-in-out;
+    transition: 300ms all ease;
     transform: translateX(-100%);
     display: flex;
     flex-direction: column;
@@ -111,11 +111,11 @@ img {
     align-items: center;
     color: var(--color-primary);
     text-decoration: none;
-    transition: 500ms all ease;
+    transition: 300ms all ease;
 }
 .sidebar__menu .list .list__item a:hover{
     transform: translateX(10px);
-    transition: 500ms all ease;
+    transition: 300ms all ease;
 }
 .a--disabled {
     pointer-events: none;

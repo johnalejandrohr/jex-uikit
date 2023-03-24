@@ -1,0 +1,56 @@
+---
+export interface Props {
+	title: string;
+	path?: string;
+	isRtl?: boolean;
+}
+
+const { title } = Astro.props;
+const distPath = '../css/style.css'
+
+
+const cssPath = '';
+
+import Header from './Header.astro';
+import Sidebar from './Sidebar.astro';
+import Footer from './Footer.astro';
+
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<link rel="stylesheet" href="/">
+		<title>{title}</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" />
+		<link rel="stylesheet" href={distPath} >
+	</head>
+	<body>
+        <Header />
+        <Sidebar />
+		<slot />
+        <Footer />
+        <script>
+            let btn_toggle = document.querySelector('#btn-toggle') as HTMLElement;
+            btn_toggle.addEventListener('click', function() {
+                document.querySelector('.sidebar')!.classList.toggle('sidebar--active');
+            });
+
+            let btn_toggle1 = document.querySelector('#btn-toggle1') as HTMLElement;
+            btn_toggle1.addEventListener('click', function() {
+                document.querySelector('.sidebar')!.classList.toggle('sidebar--active');
+            });
+
+            const link = document.querySelector('#style') as HTMLLinkElement;
+            link.addEventListener('load', () => {
+                document.documentElement.style.setProperty('--color-primary', '#000');
+            });
+
+    
+        </script>
+	</body>
+</html>
