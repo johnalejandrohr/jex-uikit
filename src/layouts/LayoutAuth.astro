@@ -31,10 +31,7 @@ import Modals from './Modals.astro';
 		<link rel="stylesheet" href={distPath} >
 	</head>
 	<body>
-        <Header />
-        <Sidebar />
 		<slot />
-        <Modals />
         
         <script>
             let btn_toggle = document.querySelector('#btn-toggle') as HTMLElement;

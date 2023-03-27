@@ -1,0 +1,120 @@
+/* Import Google Font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+// $color-primary: #84dd08;
+// $color-black: #000000;
+
+// #767cd4
+// 5b8d58
+
+$color-black: #000000;
+
+// theme uno
+$color-primary: #6815d5;
+$text-color: #ffffff;
+
+// theme dos
+$color-primary: #407048;
+$text-color: #ffffff;
+
+// theme tres
+$color-primary: orangered;
+$text-color: #ffffff;
+
+// theme cuatro
+$color-primary: #0c6350;
+$text-color: #ffffff;
+
+
+// Definición de variables personalizadas
+:root {
+    --color-black: #{$color-black};
+    --color-primary: #{$color-primary};
+    --text-color: #{$text-color};
+  }
+
+@import './utils/global';
+
+@import './pages/home';
+@import './pages/components';
+@import './pages/expenses';
+@import './pages/page-piezas';
+
+@import './layouts/header';
+@import './layouts/sidebar';
+@import './layouts/footer';
+
+@import './components/card';
+@import './components/input';
+@import './components/textarea';
+@import './components/form';
+@import './components/button';
+@import './components/qr';
+@import './components/config';
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html {
+    min-height: 100vh;
+    position: relative;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff;
+    position: relative;
+}
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mt-1 {
+    margin-top: 1rem;
+}
+
+.m1 {
+    margin: 1rem;
+}
+a {
+    color: $color-primary;
+}
+
+
+.w-30 {
+    width: 30%;
+}
+.w-70 {
+    width: 70%;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cursor-pointer {
+    cursor: pointer;
+}
+
+
+.shadow {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+}
+.shadow2 {
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+
+
+// shadows
+// https://getcssscan.com/css-box-shadow-examples
