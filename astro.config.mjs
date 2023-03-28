@@ -11,4 +11,6 @@ export default defineConfig({
           theme: 'dark-plus'
         }
       },
+      // srcDir: './src/pages',
+      // outDir: './dist/views',
 });

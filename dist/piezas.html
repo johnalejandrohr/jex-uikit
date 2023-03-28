@@ -8,8 +8,10 @@
 		<link rel="stylesheet" href="/">
 		<title>Welcome to Astro.</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous">
-		<link rel="stylesheet" href="../css/style.css">
-	<script type="module">let e=document.querySelector("#btn-toggle");e.addEventListener("click",function(){document.querySelector(".sidebar").classList.toggle("sidebar--active")});let t=document.querySelector("#btn-toggle1");t.addEventListener("click",function(){document.querySelector(".sidebar").classList.toggle("sidebar--active")});const o=document.querySelector("#style");o.addEventListener("load",()=>{document.documentElement.style.setProperty("--color-primary","#000")});
+		
+        <!-- Theme style -->
+        <link rel="stylesheet" href="../dist/css/jextuikit.css">
+	<script type="module">let e=document.querySelector("#btn-toggle");e!==null&&e.addEventListener("click",function(){document.querySelector(".sidebar").classList.toggle("sidebar--active")});let t=document.querySelector("#btn-toggle1");t!==null&&t.addEventListener("click",function(){document.querySelector(".sidebar").classList.toggle("sidebar--active")});const l=document.querySelector("#style");l!==null&&l.addEventListener("load",()=>{document.documentElement.style.setProperty("--color-primary","#000")});
 </script></head>
 	<body>
         <!-- Header --><header class="header">
@@ -25,7 +27,6 @@
         <div>
             <a href="./index.html">HOME</a>
         </div>
-        <a href="./piezas.html">Piezas</a>
     </div>
 </header>
 <!-- \header -->
@@ -49,28 +50,25 @@
     <div class="sidebar__menu">
         <ul class="list">
             <li class="list__item a--disabled">
-                <i class="bi bi-person"></i>
-                <a class="a--disabled" href="#">Perfíl</a>
-            </li>
-            <li class="list__item a--disabled">
-                <i class="bi bi-gear"></i>
-                <a class="a--disabled" href="#">Configuracion</a>
+                <a class="a--disabled" href="#"><i class="fa-sharp fa-solid fa-user"></i>Perfíl</a>
             </li>
             <li class="list__item">
-                <i class="bi bi-arrow-down"></i>
-                <a href="./components.html">Components</a>
+                <a class="" href="#"><i class="fa-sharp fa-solid fa-gear"></i>Configuracion</a>
             </li>
             <li class="list__item">
-                <i class="bi bi-arrow-up"></i>
-                <a href="./expenses.html">Expenses</a>
+                <a href="./components.html"><i class="fa-sharp fa-solid fa-cubes"></i>Components</a>
             </li>
             <li class="list__item">
-                <i class="bi bi-people"></i>
-                <a href="./index.html">Index</a>
+                <a href="./expenses.html"><i class="fa-sharp fa-solid fa-house"></i>Expenses</a>
             </li>
             <li class="list__item">
-                <i class="bi bi-door-open"></i>
-                <a href="#">Salir</a>
+                <a href="./expenses.html"><i class="fa-sharp fa-solid fa-cubes-stacked"></i>Piezas</a>
+            </li>
+            <li class="list__item">
+                <a href="./index.html"><i class="fa-sharp fa-solid fa-house"></i>Home</a>
+            </li>
+            <li class="list__item">
+                <a href="#"><i class="fa-sharp fa-solid fa-right-from-bracket"></i>Salir</a>
             </li>
         </ul>
         <div class="config">

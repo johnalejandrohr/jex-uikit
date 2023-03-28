@@ -5,11 +5,13 @@ export interface Props {
 	isRtl?: boolean;
 }
 
-const { title } = Astro.props;
-const distPath = '../css/style.css'
+const { title, path, isRtl } = Astro.props;
 
+// const distPath:string = (path !== undefined) ? path : '../../../dist';
+const distPath:string = (path !== undefined) ? path : '../dist';  
 
-const cssPath = '';
+const cssPath:string = isRtl ? '.rtl' : '';
+
 
 import Header from './Header.astro';
 import Sidebar from './Sidebar.astro';
@@ -28,7 +30,9 @@ import Modals from './Modals.astro';
 		<link rel="stylesheet" href="/">
 		<title>{title}</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" />
-		<link rel="stylesheet" href={distPath} >
+		
+        <!-- Theme style -->
+        <link rel="stylesheet" href={distPath + '/css/jextuikit' + cssPath + '.css'} >
 	</head>
 	<body>
         <Header />
@@ -37,21 +41,27 @@ import Modals from './Modals.astro';
         <Modals />
         
         <script>
-            let btn_toggle = document.querySelector('#btn-toggle') as HTMLElement;
-            btn_toggle.addEventListener('click', function() {
-                document.querySelector('.sidebar')!.classList.toggle('sidebar--active');
-            });
+           
+           let btn_toggle = document.querySelector('#btn-toggle') as HTMLElement;
+            if (btn_toggle !== null) {
+                btn_toggle.addEventListener('click', function() {
+                    document.querySelector('.sidebar')!.classList.toggle('sidebar--active');
+                });
+            }
 
             let btn_toggle1 = document.querySelector('#btn-toggle1') as HTMLElement;
-            btn_toggle1.addEventListener('click', function() {
-                document.querySelector('.sidebar')!.classList.toggle('sidebar--active');
-            });
+            if (btn_toggle1 !== null) {
+                btn_toggle1.addEventListener('click', function() {
+                    document.querySelector('.sidebar')!.classList.toggle('sidebar--active');
+                });
+            }
 
             const link = document.querySelector('#style') as HTMLLinkElement;
-            link.addEventListener('load', () => {
-                document.documentElement.style.setProperty('--color-primary', '#000');
-            });
-
+            if (link !== null) {
+                link.addEventListener('load', () => {
+                    document.documentElement.style.setProperty('--color-primary', '#000');
+                });
+            }
     
         </script>
 
