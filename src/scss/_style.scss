@@ -1,0 +1,35 @@
+/* Import Google Font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+$color-black: #000000;
+$color-primary: #0c6350;
+$text-color: #ffffff;
+
+
+// Definición de variables personalizadas
+:root {
+  --color-black: #{$color-black};
+  --color-primary: #{$color-primary};
+  --text-color: #{$text-color};
+}
+
+@import './layouts/header';
+@import './layouts/sidebar';
+@import './layouts/footer';
+
+@import './components/config';
+
+
+
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+html {
+  min-height: 100vh;
+  position: relative;
+}

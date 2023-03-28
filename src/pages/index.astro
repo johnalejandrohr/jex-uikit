@@ -4,32 +4,45 @@ import Card from "../components/Card.astro";
 ---
 
 <Layout title="Welcome to Astro.">
-	<main class="page-expenses">
-		<div class="card bg-warning">
-			<div class="card__header">
-				<p class="card__header_title">Usuarios</p>
+	<main class="content">
+		<div class="container">
+			
+			<div class="card">
+				<div class="card-header bg-dark text-white">
+					Lista de usuarios
+				</div>
+				<div class="card-body">
+					<table class="table">
+						<thead>
+						  <tr>
+							<th scope="col">#</th>
+							<th scope="col">First</th>
+							<th scope="col">Last</th>
+							<th scope="col">Handle</th>
+						  </tr>
+						</thead>
+						<tbody>
+						  <tr>
+							<th scope="row">1</th>
+							<td>Mark</td>
+							<td>Otto</td>
+							<td>@mdo</td>
+						  </tr>
+						  <tr>
+							<th scope="row">2</th>
+							<td>Jacob</td>
+							<td>Thornton</td>
+							<td>@fat</td>
+						  </tr>
+						  <tr>
+							<th scope="row">3</th>
+							<td colspan="2">Larry the Bird</td>
+							<td>@twitter</td>
+						  </tr>
+						</tbody>
+					  </table>
+				</div>
 			</div>
-			<div class="card__body">
-				<p class="card__header_title">23</p>
-			</div>
-		</div>
-		<div class="card bg-success">
-			<div class="card__header">
-				<p class="card__header_title">Nuevas ordenes</p>
-			</div>
-			<div class="card__body">150</div>
-		</div>
-		<div class="card bg-primary">
-			<div class="card__header">
-				<p class="card__header_title">Porcentaje de rebote</p>
-			</div>
-			<div class="card__body">23%</div>
-		</div>
-		<div class="card bg-secondary">
-			<div class="card__header">
-				<p class="card__header_title">Usuarios registrados</p>
-			</div>
-			<div class="card__body">55</div>
 		</div>
 	</main>
 </Layout>
