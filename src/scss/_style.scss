@@ -2,15 +2,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 $color-black: #000000;
-$color-primary: #0c6350;
-$text-color: #ffffff;
+$color-primary: #239937;
+$text-color: #000;
 
 
 // Definición de variables personalizadas
 :root {
-  --color-black: #{$color-black};
+  // --color-black: #{$color-black};
   --color-primary: #{$color-primary};
-  --text-color: #{$text-color};
+  // --text-color: #{$text-color};
+
+  --primary-color: #FFD700;
+  --primary-color-light: #FFE6AD;
+  --primary-color-dark: #C9A200;
+
+  --secondary-color: #1877F2;
+  --secondary-color-light: #4A8CFA;
+  --secondary-color-dark: #0A5CCE;
+  
+  --accent-color: #CCCCCC;
+  --bg-color: #FFFFFF;
+  --text-color: #1f1f1f;
+  --subtext-color: #6B6B6B;
+  --border-color: #E0E0E0;
+  --error-color: #FF0000;
+  --success-color: #008000;
+  --warning-color: #FFA500;
 }
 
 @import './layouts/header';
